@@ -39,4 +39,4 @@ previousButton.addEventListener('click', () => {
     previousImage(...searchImages())
 });
 
-setInterval(nextImage, 5000);
+setInterval(() => {nextImage(...searchImages())}, 5000);
