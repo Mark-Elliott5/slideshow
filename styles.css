@@ -1,0 +1,60 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+#container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    width: 400px;
+    height: 400px;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-wrapper {
+    width: 200px;
+    position: fixed;
+    transition: 0.25s;
+    opacity: 0;
+    animation: 0.5s slide-to-left;
+}
+
+.visible {
+    opacity: 1;
+    transition: 0.5s;
+    visibility: visible;
+    animation: 1s slide-from-right;
+}
+
+@keyframes slide-from-right {
+
+    from {
+        left: 200;
+    }
+
+    to {
+        left: 100;
+    }
+}
+
+@keyframes slide-to-left {
+
+    from {
+        left: 100;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
